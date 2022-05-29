@@ -2,4 +2,11 @@
     <string name="app_name">MobileDevelopment</string>
     <string name="about_me">About Me</string>
     <string name="text_to_change">Pressed: -</string>
+    <string name="button_a">A</string>
+    <string name="button_b">B</string>
+    <string name="button_c">C</string>
+    <string name="button_d">D</string>
+    <string name="button_e">E</string>
+    <string name="button_f">F</string>
+
 </resources>

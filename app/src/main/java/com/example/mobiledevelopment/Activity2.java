@@ -6,65 +6,64 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Activity2 extends AppCompatActivity {
+
+    Button A, B, C, D, E, F;
+    TextView buttonText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-    }
 
-    public void onClickA(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
+        A = findViewById(R.id.button_a);
+        B = findViewById(R.id.button_b);
+        C = findViewById(R.id.button_c);
+        D = findViewById(R.id.button_d);
+        E = findViewById(R.id.button_e);
+        F = findViewById(R.id.button_f);
+        buttonText = findViewById(R.id.textView);
 
-        changeTextOnce(buttonText, b);
-    }
-
-    public void onClickB(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
-
-        changeTextOnce(buttonText, b);
-    }
-
-    public void onClickC(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
-
-        changeTextOnce(buttonText, b);
-    }
-
-    public void onClickD(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
-
-        changeTextOnce(buttonText, b);
-    }
-
-    public void onClickE(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
-
-        changeTextOnce(buttonText, b);
-    }
-
-    public void onClickF(View v) {
-        Button b = (Button)v;
-        String buttonText = b.getText().toString();
-
-        changeTextOnce(buttonText, b);
-    }
-
-    public void changeTextOnce(String buttonText, Button changeTextButton){
-        final TextView changingText = (TextView) findViewById(R.id.textView);
-
-        changeTextButton.setOnClickListener(new View.OnClickListener() {
+        A.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                changingText.setText("Pressed: -" + buttonText);
+            public void onClick(View v) {
+                buttonText.setText("Pressed: A");
+            }
+        });
+
+        B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonText.setText("Pressed: B");
+            }
+        });
+
+        C.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonText.setText("Pressed: C");
+            }
+        });
+
+        D.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonText.setText("Pressed: D");
+            }
+        });
+
+        E.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonText.setText("Pressed: E");
+            }
+        });
+
+        F.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonText.setText("Pressed: F");
             }
         });
     }
