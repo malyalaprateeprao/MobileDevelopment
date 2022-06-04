@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void showBio(View view) {
         // Do something in response to button click
-        Toast.makeText(getApplicationContext(),"Name: Prateep rao \nEmail: prateepraomalyala@gmail.com", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(getApplicationContext(),"Name: Prateep rao \nEmail: prateepraomalyala@gmail.com", Toast.LENGTH_SHORT).show();
+        Intent activity3Intent = new Intent(getApplicationContext(), Activity3.class);
+        startActivity(activity3Intent);
     }
 
     public void clickyClicky(View view){
