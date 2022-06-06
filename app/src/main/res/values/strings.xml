@@ -9,4 +9,6 @@
     <string name="button_e">E</string>
     <string name="button_f">F</string>
 
+    <string name="messageWithLink"><a href="https://www.google.com/">Tap here to open Link</a></string>
+
 </resources>

@@ -8,16 +8,16 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="115dp"
-        android:layout_height="55dp"
+        android:layout_width="113dp"
+        android:layout_height="50dp"
         android:onClick="showBio"
         android:text="@string/about_me"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.889"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.191"
+        app:layout_constraintVertical_bias="0.647"
         tools:ignore="MissingConstraints,OnClick" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -41,28 +41,29 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:onClick="clickyClicky"
         android:text="Clicky Clicky"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.199"
         tools:ignore="MissingConstraints,OnClick" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="273dp"
-        android:layout_height="226dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:text="Link Collector"
+        android:onClick="linkCollector"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.261"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
