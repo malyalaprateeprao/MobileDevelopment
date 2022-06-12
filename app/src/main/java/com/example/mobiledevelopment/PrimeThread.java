@@ -39,16 +39,17 @@ public class PrimeThread implements Runnable {
             }
             if( k == 0) { primenos.add(v); latestprimeno = v;}
 
-            /*if(v - currentvalue > 60){
+            if(v - currentvalue > 200){
                 currentnoview.setText ("CurrentNumberChecking: " + v);
-            }*/
-            currentnoview.setText ("CurrentNumberChecking: " + currentvalue);
+            }
+            //currentnoview.setText ("CurrentNumberChecking: " + v);
             latestprimeview.setText ("LatestPrimeNumber: " + latestprimeno);
 
             currentvalue = v; v = v + 1;
             System.out.println(v);
 
-            // if v > long type terminate
+            // if v > long type terminate raise exception
+
             if(exit == true) break;
         }
     }
