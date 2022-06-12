@@ -33,4 +33,11 @@ public class MainActivity extends AppCompatActivity {
         Intent activity4Intent = new Intent(getApplicationContext(), Activity4.class);
         startActivity(activity4Intent);
     }
+
+    public void primes(View view){
+
+        Intent activity5Intent = new Intent(getApplicationContext(), Activity5.class);
+        startActivity(activity5Intent);
+    }
+
 }
