@@ -40,4 +40,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(activity5Intent);
     }
 
+    public void location(View view){
+
+        Intent LocationActivity = new Intent(getApplicationContext(), LocationActivity.class);
+        startActivity(LocationActivity);
+    }
+
 }

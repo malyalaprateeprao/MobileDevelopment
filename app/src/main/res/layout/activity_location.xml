@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".LocationActivity">
+
+<TextView
+    android:id="@+id/text_view_lat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Latitude - "
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/text_view_long"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/text_view_long"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Longitude - "
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/travel_distance"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text_view_lat" />
+
+<TextView
+    android:id="@+id/location_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello World!"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/reset_distance" />
+
+<TextView
+    android:id="@+id/travel_distance"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Traveled Distance: -"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/reset_distance"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/text_view_long" />
+
+<Button
+    android:id="@+id/get_location"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Get Location"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/reset_distance"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Reset Travel Distance"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
