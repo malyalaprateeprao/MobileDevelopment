@@ -1,73 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".LocationActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationActivity">
 
-<TextView
-    android:id="@+id/text_view_lat"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Latitude - "
-    android:textSize="16sp"
-    app:layout_constraintBottom_toTopOf="@id/text_view_long"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text_view_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude - "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/text_view_long"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_location" />
 
-<TextView
-    android:id="@+id/text_view_long"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Longitude - "
-    android:textSize="16sp"
-    app:layout_constraintBottom_toTopOf="@id/travel_distance"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/text_view_lat" />
+    <TextView
+        android:id="@+id/text_view_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude - "
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/travel_distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_lat" />
 
-<TextView
-    android:id="@+id/location_text"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    android:textSize="16sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/reset_distance" />
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accuracy: -"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/radio_group"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reset_distance" />
 
-<TextView
-    android:id="@+id/travel_distance"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Traveled Distance: -"
-    android:textSize="16sp"
-    app:layout_constraintBottom_toTopOf="@id/reset_distance"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/text_view_long" />
+    <TextView
+        android:id="@+id/travel_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Traveled Distance: -"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/reset_distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_long" />
 
-<Button
-    android:id="@+id/get_location"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Get Location"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/get_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Location"
+        app:layout_constraintBottom_toTopOf="@id/text_view_lat"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<Button
-    android:id="@+id/reset_distance"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Reset Travel Distance"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/reset_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Travel Distance"
+        app:layout_constraintBottom_toTopOf="@id/location_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/travel_distance" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precision"
+        app:layout_constraintBottom_toTopOf="@id/apply_precision"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_text" >
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Location Precision:" />
+
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Accuracy"
+            android:onClick="checkButton"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balanced Power Accuracy"
+            android:onClick="checkButton" />
+
+        <RadioButton
+            android:id="@+id/radio_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Power"
+            android:onClick="checkButton" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/apply_precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
