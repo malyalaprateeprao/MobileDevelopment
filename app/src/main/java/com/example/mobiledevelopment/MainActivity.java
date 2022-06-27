@@ -46,4 +46,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(LocationActivity);
     }
 
+    public void service(View view){
+
+        Intent ServiceActivity = new Intent(getApplicationContext(), ServiceActivity.class);
+        startActivity(ServiceActivity);
+    }
+
 }
