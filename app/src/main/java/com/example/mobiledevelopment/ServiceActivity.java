@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -30,6 +31,7 @@ public class ServiceActivity extends AppCompatActivity {
     TextView gender, probability, count;
     EditText edit_city;
     ListView list_weather;
+    WebView webV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,10 @@ public class ServiceActivity extends AppCompatActivity {
         gender = findViewById(R.id.text_gender);
         probability = findViewById(R.id.text_probability);
         count = findViewById(R.id.text_count);
+        webV = findViewById(R.id.webview);
+
+
+        webV.getSettings().setJavaScriptEnabled(true);
 
         cityId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +64,9 @@ public class ServiceActivity extends AppCompatActivity {
 
                 RequestQueue queue = Volley.newRequestQueue(ServiceActivity.this);
                 String url ="https://api.genderize.io/?name=" + name;
+
+                //webV.loadUrl("https://api.genderize.io/?name=sri");
+                webV.loadUrl(url);
 
                 // Request a string response from the provided URL.
                 /*StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
